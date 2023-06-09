@@ -110,17 +110,6 @@ prob_cities.to_csv('provincias_cities.csv',index=False)
 
 
 
-
-
-
-
-
-
-
-
-
-#PRUEBA
-
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -199,7 +188,7 @@ filtered_df.to_csv('./filtrado_sin_cpa.csv')
 print('HASTA ACA SON TODAS LAS TRANSFORMACIONES')
 
 # Crear un archivo CSV para guardar los resultados
-with open('INTENTO_CALLESYCPANUEVO.csv', 'w', encoding='utf-8', newline='') as outfile:
+with open('CALLESYCPA.csv', 'w', encoding='utf-8', newline='') as outfile:
     writer = csv.writer(outfile)
     writer.writerow(['URL', 'Calle/Avenida', 'desde', 'hasta', 'aplica a', 'Código Postal', 'CPA', 'PROVINCIA'])
 
@@ -242,4 +231,4 @@ with open('INTENTO_CALLESYCPANUEVO.csv', 'w', encoding='utf-8', newline='') as o
                 print(f"Error al procesar la URL: {city}")
                 print(e)
 
-print("Los resultados se han guardado en 'INTENTO_CALLESYCPA.csv'.")
+print("Los resultados se han guardado en 'CALLESYCPA.csv'.")
